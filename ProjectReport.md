@@ -30,5 +30,9 @@ just seems more complicated and messy compared to OO.
 
 ## Reflection Question #2: Polymorphism and Dependency Inversion
 
-
+I think I was supposed to use Dependency Inversion for the second challenge but I didn't really understand how
+to accomplish that, but I do see how it can work from the 1st challenge. In the first challenge we are working with
+changing the FakeQueryEngine with WikipediaQueryEngine in the QueryEngineModule. You can see that both engines implement
+the QueryEngine Interface which is then Injected into Wikipedia Analyzer. This creates a nice flow that I think qualifies
+as dependency inversion.
 
