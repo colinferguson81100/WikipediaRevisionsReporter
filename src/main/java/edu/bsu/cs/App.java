@@ -4,6 +4,7 @@ import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Provides;
+import edu.bsu.cs.model.RevisionModule;
 import edu.bsu.cs.view.WikipediaAnalyzer;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -28,6 +29,7 @@ public final class App extends Application {
     @Override
     public void start(Stage primaryStage) {
         Injector injector = Guice.createInjector(
+                new RevisionModule(),
                 new QueryEngineModule(),
                 executorServiceModule
         );
